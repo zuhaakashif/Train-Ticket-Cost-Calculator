@@ -1,0 +1,65 @@
+bill = 0
+executive_class=5000
+lowerac=2000
+economy= 1500
+lahore=3000
+karachi=5000
+quetta=8000
+peshawar=2500
+place=input("WHERE DO YOU WANT TO GO? (KARACHI, PESHAWAR, QUETTA, LAHORE): ")
+if place == "KARACHI":
+    bill+=karachi
+    print("YOUR TICKET TO KARACHI COSTS", bill,"RS")
+    class_travel=input("SELECT A CLASS(EXECUTIVE CLASS, LOWER AC, ECONOMY): ")
+    if class_travel=="EXECUTIVE CLASS":
+      bill+=executive_class
+    elif class_travel=="LOWER AC":
+      bill+=lowerac
+    elif class_travel=="ECONOMY":
+      bill+=economy
+    else:
+      print("INVALID INPUT")
+elif place=="LAHORE":
+    bill+=lahore
+    print("YOUR TICKET TO LAHORE COSTS: ", bill,"RS")
+    class_travel=input("SELECT A CLASS(EXECUTIVE CLASS, LOWER AC, ECONOMY): ")
+    if class_travel=="EXECUTIVE CLASS":
+      bill+=executive_class
+    elif class_travel=="LOWER AC":
+      bill+=lowerac
+    elif class_travel=="ECONOMY":
+      bill+=economy
+    else:
+      print("INVALID INPUT")
+elif place=="PESHAWAR":
+    bill+=peshawar
+    print("YOUR TICKET TO PESHAWAR COSTS: ", bill,"RS")
+    class_travel=input("SELECT A CLASS(EXECUTIVE CLASS, LOWER AC, ECONOMY): ")
+    if class_travel=="EXECUTIVE CLASS":
+      bill+=executive_class
+    elif class_travel=="LOWER AC":
+      bill+=lowerac
+    elif class_travel=="ECONOMY":
+      bill+=economy
+    else:
+      print("INVALID INPUT")
+elif place == "QUETTA":
+    bill+=quetta
+    print("YOUR TICKET TO QUETTA COSTS: ", bill,"RS")
+    class_travel=input("SELECT A CLASS(EXECUTIVE CLASS, LOWER AC, ECONOMY): ")
+    if class_travel=="EXECUTIVE CLASS":
+      bill+=executive_class
+    elif class_travel=="LOWER AC":
+      bill+=lowerac
+    elif class_travel=="ECONOMY":
+      bill+=economy
+    else:
+      print("INVALID INPUT")
+else: 
+  print("INVALID INPUT")
+
+print("YOUR BILL IS : ", bill,"RS")
+tax= (15/100) * bill
+bill+=tax
+print ("YOUR TOTAL BILL INCLUDING 15% GST IS: ", bill,"RS")
+  
